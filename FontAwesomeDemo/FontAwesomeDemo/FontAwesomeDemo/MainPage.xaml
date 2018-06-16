@@ -4,11 +4,20 @@
              xmlns:local="clr-namespace:FontAwesomeDemo"
              x:Class="FontAwesomeDemo.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Button Text="&#xf007;" FontSize="36">
+            <Button.FontFamily>
+                <OnPlatform x:TypeArguments="x:String" Android="fa-solid-900.ttf#Font Awesome 5 Free Regular" 
+                                                       iOS="Font Awesome 5 Free"/>
+            </Button.FontFamily>
+        </Button>
+
+        <Label Text="&#xf007;" FontSize="36" HorizontalTextAlignment="Center">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String" Android="fa-solid-900.ttf#Font Awesome 5 Free Regular" 
+                                                       iOS="Font Awesome 5 Free"/>
+            </Label.FontFamily>
+        </Label>
     </StackLayout>
 
 </ContentPage>
